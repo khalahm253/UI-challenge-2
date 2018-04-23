@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+  background: #ccc;
+  padding: 30px 30px 50px;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  color: #4a4a4a;
+}
+main {
+  width: 760px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 25px 60px 50px;
+}
+h1 {
+  font-size: 26px;
+  text-align: center;
+  text-decoration: underline;
+  margin: 25px 0 35px;
+}
+
+form {
+  width: 100%;
+}
+
+label{
+  display: block;
+  margin: 15px 0 10px;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.015em;
+  clear: both;
+}
+
+input, select, option{
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+  padding-left: 1em;
+  margin-bottom: 100px;
+  width: 100%;
+  height: 60px;
+  background: none;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  letter-spacing: 0.015em;
+}
+ input[type="text"] {
+   margin-bottom: 10px;
+ }
+input:invalid {
+  border-color: red;
+}
+
+.error-msg {
+  float: right;
+  margin-bottom: 70px;
+  color: red;
+  visibility: hidden;
+  font-size: 17px;
+  letter-spacing: 0.015em;
+}
+input:invalid + .error-msg {
+  visibility: visible;
+}
+
+button {
+  font-size: 22px;
+  height: 50px;
+  padding: 0 30px;
+  background: #d8d8d8;
+  color: #4a4a4a;
+  border: none;
+}
+
+button:hover,
+button:focus {
+  background: #4a4a4a;
+  color: #fff;
+}
+
+form input.use-sprite,
+form button.use-sprite {
+  display: none;
+}
+
+form label div{
+  width: 58px;
+  height: 58px;
+  background-image: url('../form-elements-sprite.png');
+  background-size: 500px;
+  background-position: -55px -82px;
+}
+form input#checkbox:checked + label div{
+  background-position-x: -131px;
+}
+
+form label[for="radio"] div{
+  background-position-x: -200px;
+}
+
+form input#radio:checked + label div{
+  background-position-x: -280px;
+}
+
+form label.use-sprite {
+  margin-bottom: 70px;
+}
